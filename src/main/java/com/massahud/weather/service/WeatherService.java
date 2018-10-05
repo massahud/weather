@@ -5,15 +5,13 @@ import com.massahud.weather.model.AverageForecast;
 import com.massahud.weather.model.DayAverage;
 import com.massahud.weather.model.HourAverage;
 import com.massahud.weather.model.HourlyForecast;
-import org.springframework.stereotype.Service;
-
 import org.slf4j.Logger;
+import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;

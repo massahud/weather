@@ -3,19 +3,19 @@ package com.massahud.weather.gateway.openweathermap;
 import com.massahud.weather.model.HourAverage;
 import com.massahud.weather.model.HourlyForecast;
 import net.aksingh.owmjapis.api.APIException;
-import net.aksingh.owmjapis.core.OWM;
 import net.aksingh.owmjapis.model.HourlyWeatherForecast;
 import org.slf4j.Logger;
+import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
 import javax.ws.rs.NotFoundException;
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 public class WeatherGateway {
 
     private final Logger logger;

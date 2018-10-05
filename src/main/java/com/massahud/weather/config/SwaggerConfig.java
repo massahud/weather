@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.converter.ModelConverters;
 import io.swagger.jackson.ModelResolver;
 import io.swagger.jaxrs.config.BeanConfig;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.context.annotation.Configuration;
 
 import javax.inject.Inject;

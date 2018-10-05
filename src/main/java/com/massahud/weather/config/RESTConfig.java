@@ -1,12 +1,7 @@
 package com.massahud.weather.config;
 
-import javax.ws.rs.ApplicationPath;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.massahud.weather.resource.DataResource;
-import io.swagger.converter.ModelConverters;
-import io.swagger.jackson.ModelResolver;
-import io.swagger.jaxrs.config.BeanConfig;
 import io.swagger.jaxrs.listing.ApiListingResource;
 import io.swagger.jaxrs.listing.SwaggerSerializers;
 import org.glassfish.jersey.jackson.internal.jackson.jaxrs.json.JacksonJaxbJsonProvider;
@@ -14,6 +9,8 @@ import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.ServerProperties;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+
+import javax.ws.rs.ApplicationPath;
 
 /**
  * Configuration of JAX-RS with Jersey

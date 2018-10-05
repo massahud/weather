@@ -23,6 +23,9 @@ repositories {
     mavenCentral()
 }
 
+bootRun {
+    args = ["--spring.profiles.active=development,default"]
+}
 
 ext {
     springCloudVersion = 'Finchley.SR1'
