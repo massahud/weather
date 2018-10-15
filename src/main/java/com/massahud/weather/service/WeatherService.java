@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
@@ -67,9 +68,9 @@ public class WeatherService {
 
                     calculated.add(new DayAverage(
                             currentDate,
-                            countDay == 0 ? null :dayTemp.divide(BigDecimal.valueOf(countDay)),
-                            countNight == 0 ? null :nightTemp.divide(BigDecimal.valueOf(countNight)),
-                            countPressure == 0 ? null :pressure.divide(BigDecimal.valueOf(countPressure)))
+                            countDay == 0 ? null :dayTemp.divide(BigDecimal.valueOf(countDay), RoundingMode.HALF_UP),
+                            countNight == 0 ? null :nightTemp.divide(BigDecimal.valueOf(countNight), RoundingMode.HALF_UP),
+                            countPressure == 0 ? null :pressure.divide(BigDecimal.valueOf(countPressure), RoundingMode.HALF_UP))
                     );
 
                     countDay = 0;
@@ -94,9 +95,9 @@ public class WeatherService {
             }
             calculated.add(new DayAverage(
                     currentDate,
-                    countDay == 0 ? null : dayTemp.divide(BigDecimal.valueOf(countDay)),
-                    countNight == 0 ? null : nightTemp.divide(BigDecimal.valueOf(countNight)),
-                    countPressure == 0 ? null : pressure.divide(BigDecimal.valueOf(countPressure)))
+                    countDay == 0 ? null : dayTemp.divide(BigDecimal.valueOf(countDay), RoundingMode.HALF_UP),
+                    countNight == 0 ? null : nightTemp.divide(BigDecimal.valueOf(countNight), RoundingMode.HALF_UP),
+                    countPressure == 0 ? null : pressure.divide(BigDecimal.valueOf(countPressure), RoundingMode.HALF_UP))
             );
         }
         return calculated;
